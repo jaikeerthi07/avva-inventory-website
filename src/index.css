@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-primary: #0c3c78;
+  --color-accent: #f7b500;
+  --color-primary-90: color-mix(in oklab, var(--color-primary) 90%, transparent);
+  --color-primary-20: color-mix(in oklab, var(--color-primary) 20%, transparent);
+  --color-primary-30: color-mix(in oklab, var(--color-primary) 30%, transparent);
+  --color-primary-5: color-mix(in oklab, var(--color-primary) 5%, transparent);
+  --color-accent-20: color-mix(in oklab, var(--color-accent) 20%, transparent);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased text-slate-800 bg-slate-50;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #0c3c78 0%, #082855 100%);
+}
