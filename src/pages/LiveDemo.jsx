@@ -31,7 +31,7 @@ const LiveDemo = () => {
         
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight">
+          <h1 className="text-5xl font-black text-slate-800 mb-4 tracking-tight">
             Explore <span className="text-primary">V4Sure</span> Live Demo
           </h1>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
@@ -66,7 +66,7 @@ const LiveDemo = () => {
             </button>
           </div>
 
-          <div className="p-8 md:p-12">
+          <div className="p-12">
             {activeTab === 'demo' ? (
               /* Live Demo Projects Tab Content */
               <div className="text-center">
@@ -99,7 +99,7 @@ const LiveDemo = () => {
               </div>
             ) : (
               /* Get Login Access Tab Content */
-              <div className="flex flex-col lg:flex-row gap-12">
+              <div className="flex flex-row gap-12">
                 {/* Form Section */}
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-8">
@@ -113,7 +113,7 @@ const LiveDemo = () => {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-slate-700">Full Name *</label>
                         <input 
@@ -139,7 +139,7 @@ const LiveDemo = () => {
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-slate-700">Phone Number *</label>
                         <input 

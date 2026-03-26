@@ -58,14 +58,14 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section id="features" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+    <section id="features" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16 leading-relaxed">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+            className="text-4xl font-black text-slate-900 mb-4 tracking-tight"
           >
             Everything You Need to Scale
           </motion.h2>
@@ -74,7 +74,7 @@ const FeaturesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg text-slate-600"
+            className="text-lg text-slate-600 font-medium"
           >
             Avva Inventory comes packed with robust features designed to streamline your daily operations and boost efficiency.
           </motion.p>
@@ -85,19 +85,19 @@ const FeaturesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-3 gap-10"
         >
           {features.map((feature, index) => (
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="group p-8 rounded-2xl border border-slate-100 bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
+              className="group p-8 rounded-2xl border border-slate-100 bg-white hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 mix-blend-multiply ${feature.color}`}>
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed font-medium">
                 {feature.description}
               </p>
             </motion.div>

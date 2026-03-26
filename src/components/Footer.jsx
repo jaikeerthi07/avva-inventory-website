@@ -4,9 +4,9 @@ import { Package } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-slate-900 pt-16 pb-8 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
-          <div className="col-span-1 md:col-span-2">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="grid grid-cols-4 gap-8 mb-12">
+          <div className="col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img src="/v4sure-logo.png" alt="V4Sure IT Solutions" className="h-8 w-auto" />
               <span className="font-bold text-xl text-white tracking-tight">
@@ -38,8 +38,8 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-center md:text-left">
+        <div className="pt-8 border-t border-slate-800 flex flex-row items-center justify-between gap-4">
+          <p className="text-slate-500 text-sm text-left">
             © 2026 V4Sure IT Solutions. All rights reserved.
           </p>
           <div className="text-slate-500 text-sm flex gap-6">
