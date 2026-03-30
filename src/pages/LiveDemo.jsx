@@ -26,12 +26,12 @@ const LiveDemo = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-28 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-50 pt-24 md:pt-28 pb-16 md:pb-20">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-black text-slate-800 mb-4 tracking-tight">
+        <div className="text-center mb-10 md:mb-12">
+          <h1 className="text-3xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight">
             Explore <span className="text-primary">V4Sure</span> Live Demo
           </h1>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
@@ -44,48 +44,48 @@ const LiveDemo = () => {
           <div className="flex border-b border-slate-100">
             <button
               onClick={() => setActiveTab('demo')}
-              className={`flex-1 py-5 flex items-center justify-center gap-3 font-bold transition-all ${
+              className={`flex-1 py-4 md:py-5 flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 font-bold transition-all text-sm md:text-base ${
                 activeTab === 'demo' 
                   ? 'bg-linear-to-r from-blue-600 to-indigo-600 text-white' 
                   : 'text-slate-500 hover:bg-slate-50'
               }`}
             >
-              <Play size={20} fill={activeTab === 'demo' ? 'currentColor' : 'none'} />
-              Live Demo Projects
+              <Play size={18} fill={activeTab === 'demo' ? 'currentColor' : 'none'} />
+              <span>Live Demo</span>
             </button>
             <button
               onClick={() => setActiveTab('access')}
-              className={`flex-1 py-5 flex items-center justify-center gap-3 font-bold transition-all ${
+              className={`flex-1 py-4 md:py-5 flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-3 font-bold transition-all text-sm md:text-base ${
                 activeTab === 'access' 
                   ? 'bg-linear-to-r from-blue-600 to-indigo-600 text-white' 
                   : 'text-slate-500 hover:bg-slate-50'
               }`}
             >
-              <Key size={20} />
-              Get Login Access
+              <Key size={18} />
+              <span>Get Access</span>
             </button>
           </div>
 
-          <div className="p-12">
+          <div className="p-6 md:p-12">
             {activeTab === 'demo' ? (
               /* Live Demo Projects Tab Content */
               <div className="text-center">
-                <div className="mb-8 flex justify-center">
-                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200 animate-pulse">
-                    <Play size={32} fill="currentColor" />
+                <div className="mb-6 md:mb-8 flex justify-center">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200 animate-pulse">
+                    <Play size={28} md:size={32} fill="currentColor" />
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-800 mb-2">Click to Open Live Demo Projects</h2>
-                <p className="text-slate-500 mb-12">Open any demo project in a new tab. Contact us for login credentials.</p>
+                <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">Click to Open Live Demo Projects</h2>
+                <p className="text-slate-500 mb-8 md:mb-12 text-sm md:text-base">Open any demo project in a new tab. Contact us for login credentials.</p>
 
-                <div className="grid grid-cols-1 gap-8 max-w-lg mx-auto">
+                <div className="grid grid-cols-1 gap-6 md:gap-8 max-w-lg mx-auto">
                   {/* Avva Inventory Card */}
-                  <div className="group relative bg-white border border-slate-100 rounded-2xl p-8 text-center transition-all hover:shadow-2xl hover:-translate-y-1">
-                    <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                      <Package size={32} />
+                  <div className="group relative bg-white border border-slate-100 rounded-2xl p-6 md:p-8 text-center transition-all hover:shadow-2xl hover:-translate-y-1">
+                    <div className="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <Package size={28} md:size={32} />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-800 mb-3">Avva Inventory Management</h3>
-                    <p className="text-sm text-slate-500 mb-8">Intelligent inventory control for stock, sales, and purchase management systems.</p>
+                    <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 md:mb-3">Avva Inventory Management</h3>
+                    <p className="text-xs md:text-sm text-slate-500 mb-6 md:mb-8 font-medium">Intelligent inventory control for stock, sales, and purchase management systems.</p>
                     <a 
                       href="https://inventoryapp.v4sureitsolutions.com" 
                       target="_blank"
@@ -99,7 +99,7 @@ const LiveDemo = () => {
               </div>
             ) : (
               /* Get Login Access Tab Content */
-              <div className="flex flex-row gap-12">
+              <div className="flex flex-col lg:flex-row gap-12">
                 {/* Form Section */}
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-8">
@@ -113,7 +113,7 @@ const LiveDemo = () => {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-slate-700">Full Name *</label>
                         <input 
@@ -139,7 +139,7 @@ const LiveDemo = () => {
                         />
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-slate-700">Phone Number *</label>
                         <input 

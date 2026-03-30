@@ -4,9 +4,9 @@ import { Package } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-slate-900 pt-16 pb-8 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="grid grid-cols-4 gap-8 mb-12">
-          <div className="col-span-2">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+          <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img src="/v4sure-logo.png" alt="V4Sure IT Solutions" className="h-8 w-auto" />
               <span className="font-bold text-xl text-white tracking-tight">
@@ -38,11 +38,11 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-slate-800 flex flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-left">
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="text-slate-500 text-sm">
             © 2026 V4Sure IT Solutions. All rights reserved.
           </p>
-          <div className="text-slate-500 text-sm flex gap-6">
+          <div className="text-slate-500 text-sm flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
             <a href="https://www.v4sureitsolutions.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
               www.v4sureitsolutions.com
             </a>

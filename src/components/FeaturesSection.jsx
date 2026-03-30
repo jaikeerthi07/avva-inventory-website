@@ -58,14 +58,14 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section id="features" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 leading-relaxed">
+    <section id="features" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-black text-slate-900 mb-4 tracking-tight"
+            className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight"
           >
             Everything You Need to Scale
           </motion.h2>
@@ -85,7 +85,7 @@ const FeaturesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-3 gap-10"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
         >
           {features.map((feature, index) => (
             <motion.div 

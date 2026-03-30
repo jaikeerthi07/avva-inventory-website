@@ -3,35 +3,35 @@ import { Mail, Globe, Phone, MessageCircle } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
+    <section id="contact" className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="bg-primary rounded-[2rem] overflow-hidden shadow-2xl relative">
           <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
           <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
           
-          <div className="relative z-10 p-20 flex flex-row items-center justify-between gap-12">
-            <div className="text-white max-w-xl">
-              <h2 className="text-4xl font-black mb-6 leading-tight">Ready to Transform Your Business?</h2>
+          <div className="relative z-10 p-10 md:p-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div className="text-white max-w-xl text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl font-black mb-6 leading-tight">Ready to Transform Your Business?</h2>
               <p className="text-blue-100 text-lg mb-10 font-medium leading-relaxed">
                 Get in touch with us today to start your journey with Avva Inventory. Our team is ready to assist you.
               </p>
               
-              <div className="space-y-6">
-                <a href="https://www.v4sureitsolutions.com" target="_blank" rel="noreferrer" className="flex items-center gap-4 group hover:text-accent transition-all duration-300">
+              <div className="space-y-6 flex flex-col items-center lg:items-start">
+                <a href="https://www.v4sureitsolutions.com" target="_blank" rel="noreferrer" className="flex flex-col sm:flex-row items-center gap-4 group hover:text-accent transition-all duration-300">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-all duration-300">
                     <Globe size={24} className="text-white" />
                   </div>
                   <span className="text-lg font-bold">www.v4sureitsolutions.com</span>
                 </a>
                 
-                <a href="mailto:support@v4sureitsolutions.com" className="flex items-center gap-4 group hover:text-accent transition-all duration-300">
+                <a href="mailto:support@v4sureitsolutions.com" className="flex flex-col sm:flex-row items-center gap-4 group hover:text-accent transition-all duration-300">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-all duration-300">
                     <Mail size={24} className="text-white" />
                   </div>
                   <span className="text-lg font-bold">support@v4sureitsolutions.com</span>
                 </a>
                 
-                <a href="tel:9342301582" className="flex items-center gap-4 group hover:text-accent transition-all duration-300">
+                <a href="tel:9342301582" className="flex flex-col sm:flex-row items-center gap-4 group hover:text-accent transition-all duration-300">
                   <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-md group-hover:bg-white/20 transition-all duration-300">
                     <Phone size={24} className="text-white" />
                   </div>

@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-48 pb-32 overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-8 relative z-10 text-center">
+    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 text-center">
         {/* Top Badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[11px] font-bold tracking-widest uppercase mb-8"
+          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] md:text-[11px] font-bold tracking-widest uppercase mb-6 md:mb-8"
         >
           V4SURE IT SOLUTIONS
         </motion.div>
@@ -20,7 +20,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-7xl font-black text-primary tracking-tight mb-6 leading-[1.1]"
+          className="text-4xl md:text-7xl font-black text-primary tracking-tight mb-4 md:mb-6 leading-[1.2] md:leading-[1.1]"
         >
           Avva Inventory
         </motion.h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-xl font-bold text-slate-500 tracking-[0.2em] uppercase mb-8"
+          className="text-base md:text-xl font-bold text-slate-500 tracking-[0.1em] md:tracking-[0.2em] uppercase mb-6 md:mb-8"
         >
           Smart Stock Management
         </motion.h2>
@@ -40,7 +40,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="max-w-2xl mx-auto text-xl text-slate-600 leading-relaxed font-medium mb-12"
+          className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed font-medium mb-10 md:mb-12"
         >
           Streamline your stock management, sales, and purchases with our intelligent inventory control system.
           Designed for businesses that value efficiency and accuracy.
@@ -55,7 +55,7 @@ const HeroSection = () => {
         >
           <Link
             to="/live-demo"
-            className="px-10 py-5 bg-primary hover:bg-primary-90 text-white rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:shadow-primary-30 hover:-translate-y-1"
+            className="w-full md:w-auto px-10 py-5 bg-primary hover:bg-primary-90 text-white rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:shadow-primary-30 hover:-translate-y-1"
           >
             3 Days Free Trial
           </Link>

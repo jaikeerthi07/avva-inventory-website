@@ -46,21 +46,21 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 gradient-bg">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 leading-relaxed">
-          <h2 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">Simple, Transparent Pricing</h2>
+    <section id="pricing" className="py-16 md:py-24 gradient-bg">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight">Simple, Transparent Pricing</h2>
           <p className="text-lg text-slate-600 font-medium">
             Choose the perfect plan for your business size. No hidden fees.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <div 
               key={index}
               className={`relative p-8 rounded-3xl bg-primary text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 ${
-                plan.highlighted ? 'scale-105 z-10' : 'scale-100'
+                plan.highlighted ? 'md:scale-105 z-10' : 'scale-100'
               }`}
             >
               {plan.badge && (
