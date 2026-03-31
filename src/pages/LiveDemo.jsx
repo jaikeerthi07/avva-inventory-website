@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, Key, MessageCircle, Mail, Phone, CheckCircle2, Package, Layout, Database, BarChart3, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const LiveDemo = () => {
   const [activeTab, setActiveTab] = useState('demo');
@@ -31,12 +32,21 @@ const LiveDemo = () => {
         
         {/* Header Section */}
         <div className="text-center mb-10 md:mb-12">
-          <h1 className="text-3xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-3xl md:text-5xl font-black text-slate-800 mb-4 tracking-tight"
+          >
             Explore <span className="text-primary">V4Sure</span> Live Demo
-          </h1>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto font-medium">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-slate-500 max-w-2xl mx-auto font-medium"
+          >
             Click to open live demo projects or contact our team for exclusive access
-          </p>
+          </motion.p>
         </div>
 
         {/* Tab Navigation */}

@@ -16,16 +16,46 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
   }
   body {
-    @apply font-sans antialiased text-slate-800 bg-slate-50;
+    @apply font-sans antialiased text-slate-800 bg-slate-50 overflow-x-hidden;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  * {
+    box-sizing: border-box;
   }
 }
 
 .gradient-bg {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .primary-gradient {
   background: linear-gradient(135deg, #0c3c78 0%, #082855 100%);
+}
+
+.text-fluid-h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.875rem, 5vw, 2.5rem);
+}
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-padding {
+  @apply px-6 md:px-8 lg:px-12;
 }

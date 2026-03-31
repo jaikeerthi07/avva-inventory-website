@@ -1,26 +1,33 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import logo from '../assets/avvainventory_logo.jpeg';
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10 text-center">
-        {/* Top Badge */}
+    <section id="home" className="relative pt-20 pb-16 md:pt-32 md:pb-32 lg:pt-40 lg:pb-48 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10 text-center">
+        {/* Logo */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] md:text-[11px] font-bold tracking-widest uppercase mb-6 md:mb-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="flex justify-center mb-0 select-none"
         >
-          V4SURE IT SOLUTIONS
+          <div className="relative group overflow-hidden">
+            <img
+              src={logo}
+              alt="Avva Inventory Logo"
+              className="h-28 sm:h-40 md:h-64 lg:h-80 w-auto object-contain mix-blend-multiply relative z-10 transition-transform duration-700 ease-out group-hover:scale-105 mask-[linear-gradient(to_right,black_92%,transparent)] contrast-125 brightness-110 max-w-full"
+            />
+          </div>
         </motion.div>
 
         {/* Main Title */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl md:text-7xl font-black text-primary tracking-tight mb-4 md:mb-6 leading-[1.2] md:leading-[1.1]"
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="-mt-6 md:-mt-12 text-fluid-h1 font-[900] text-primary tracking-tighter mb-4 md:mb-6 leading-[1.1] md:leading-[1.05]"
         >
           Avva Inventory
         </motion.h1>
@@ -29,8 +36,8 @@ const HeroSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-base md:text-xl font-bold text-slate-500 tracking-[0.1em] md:tracking-[0.2em] uppercase mb-6 md:mb-8"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-sm md:text-lg lg:text-xl font-bold text-slate-400 tracking-[0.2em] md:tracking-[0.4em] uppercase mb-8 md:mb-10"
         >
           Smart Stock Management
         </motion.h2>
@@ -39,32 +46,35 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="max-w-2xl mx-auto text-lg md:text-xl text-slate-600 leading-relaxed font-medium mb-10 md:mb-12"
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="max-w-2xl mx-auto text-base md:text-xl lg:text-2xl text-slate-600 leading-relaxed font-medium mb-8 md:mb-14 px-2"
         >
           Streamline your stock management, sales, and purchases with our intelligent inventory control system.
-          Designed for businesses that value efficiency and accuracy.
+          Designed for businesses that value <span className="text-primary font-bold">efficiency</span> and <span className="text-primary font-bold">accuracy</span>.
         </motion.p>
 
         {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex justify-center"
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0"
         >
           <Link
             to="/live-demo"
-            className="w-full md:w-auto px-10 py-5 bg-primary hover:bg-primary-90 text-white rounded-2xl font-bold text-lg transition-all shadow-xl shadow-primary/20 hover:shadow-primary-30 hover:-translate-y-1"
+            className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 bg-primary hover:bg-primary-90 text-white rounded-2xl font-bold text-base md:text-lg transition-all shadow-xl shadow-primary-20 hover:shadow-primary-30 hover:-translate-y-1 active:scale-[0.98]"
           >
             3 Days Free Trial
           </Link>
         </motion.div>
       </div>
 
-      {/* Background Decorative Gradient */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none opacity-30">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] bg-gradient-radial from-blue-50 to-transparent blur-3xl"></div>
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-50/50 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[20%] right-[-5%] w-[30%] h-[30%] bg-amber-50/40 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[20%] right-[10%] w-[200px] h-[200px] border border-slate-100 rounded-full opacity-20"></div>
+        <div className="absolute bottom-[10%] left-[15%] w-[150px] h-[150px] border border-primary/5 rounded-full opacity-20"></div>
       </div>
     </section>
   );
