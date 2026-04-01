@@ -77,10 +77,8 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative p-8 md:p-10 lg:p-12 rounded-[2.5rem] md:rounded-4xl flex flex-col transition-all duration-500 hover:-translate-y-2 group shadow-2xl ${
-                plan.highlighted 
-                  ? 'bg-primary text-white z-10 lg:scale-105 shadow-primary-20' 
-                  : 'bg-white text-slate-900 border border-slate-100'
+              className={`relative p-8 md:p-10 lg:p-12 rounded-[2.5rem] md:rounded-4xl flex flex-col transition-all duration-500 hover:-translate-y-2 group bg-primary text-white shadow-2xl shadow-primary-20 ${
+                plan.highlighted ? 'z-10 lg:scale-105' : ''
               }`}
             >
               {plan.badge && (
@@ -98,31 +96,31 @@ const PricingSection = () => {
               )}
               
               <div className="mb-6 md:mb-8">
-                <h3 className={`text-2xl md:text-3xl font-black mb-3 tracking-tight ${plan.highlighted ? 'text-white' : 'text-slate-900'}`}>
+                <h3 className="text-2xl md:text-3xl font-black mb-3 tracking-tight text-white">
                   {plan.name}
                 </h3>
-                <p className={`text-sm md:text-base font-medium leading-relaxed min-h-[3rem] ${plan.highlighted ? 'text-blue-100 opacity-80' : 'text-slate-500'}`}>
+                <p className="text-sm md:text-base font-medium leading-relaxed min-h-[3rem] text-blue-100 opacity-80">
                   {plan.description}
                 </p>
               </div>
 
               <div className="mb-6 md:mb-10 flex items-baseline gap-1">
-                <span className={`text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter ${plan.highlighted ? 'text-white' : 'text-slate-900'}`}>
+                <span className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white">
                   {plan.price}
                 </span>
-                <span className={`text-lg font-bold ${plan.highlighted ? 'text-blue-200' : 'text-slate-400'}`}>
+                <span className="text-lg font-bold text-blue-200">
                   {plan.period}
                 </span>
               </div>
 
               <div className="flex-grow">
                 <ul className="space-y-4 md:space-y-5 mb-10 md:mb-12">
-                  <div className={`text-[11px] font-black uppercase tracking-[0.2em] mb-4 md:mb-6 ${plan.highlighted ? 'text-blue-200 opacity-70' : 'text-slate-400'}`}>
+                  <div className="text-[11px] font-black uppercase tracking-[0.2em] mb-4 md:mb-6 text-blue-200 opacity-70">
                     What's included:
                   </div>
                   {plan.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-start group/item">
-                      <div className={`mr-4 shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-transform duration-300 group-hover/item:scale-110 mb-1 ${plan.highlighted ? 'bg-white/10' : 'bg-primary-5'}`}>
+                      <div className="mr-4 shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-transform duration-300 group-hover/item:scale-110 mb-1 bg-white/10">
                         <Check 
                           size={14} 
                           className="text-accent" 
@@ -130,10 +128,10 @@ const PricingSection = () => {
                         />
                       </div>
                       <div className="flex flex-col w-full">
-                        <span className={`text-base font-bold leading-tight ${plan.highlighted ? 'text-white' : 'text-slate-900'}`}>
+                        <span className="text-base font-bold leading-tight text-white">
                           {feature.name}
                         </span>
-                        <span className={`text-[11px] font-black uppercase tracking-wider mt-1 ${plan.highlighted ? 'text-blue-200' : 'text-slate-400'}`}>
+                        <span className="text-[11px] font-black uppercase tracking-wider mt-1 text-blue-200">
                           {feature.details}
                         </span>
                       </div>
@@ -144,11 +142,7 @@ const PricingSection = () => {
 
               <Link 
                 to="/live-demo"
-                className={`block w-full text-center py-5 md:py-6 rounded-2xl md:rounded-3xl font-black text-lg transition-all shadow-xl active:scale-[0.98] ${
-                  plan.highlighted 
-                    ? 'bg-accent text-slate-900 hover:bg-yellow-400 shadow-accent-20 hover:shadow-accent-40' 
-                    : 'bg-primary text-white hover:bg-primary-90 shadow-primary-10 hover:shadow-primary-30'
-                }`}
+                className="block w-full text-center py-5 md:py-6 rounded-2xl md:rounded-3xl font-black text-lg transition-all shadow-xl active:scale-[0.98] bg-accent text-slate-900 hover:bg-yellow-400 shadow-accent-20 hover:shadow-accent-40"
               >
                 {plan.cta}
               </Link>
