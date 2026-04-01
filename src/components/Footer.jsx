@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-xl mb-8 tracking-tight">Quick Links</h4>
             <ul className="space-y-4">
               <li><a href="#home" className="text-slate-400 hover:text-accent transition-all hover:translate-x-1 inline-block font-medium">Home</a></li>
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-xl mb-8 tracking-tight">Legal</h4>
             <ul className="space-y-4">
               <li><a href="#" className="text-slate-400 hover:text-accent transition-all hover:translate-x-1 inline-block font-medium">Privacy Policy</a></li>

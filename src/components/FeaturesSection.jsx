@@ -59,46 +59,46 @@ const FeaturesSection = () => {
 
   return (
     <section id="features" className="section-padding bg-white relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 leading-relaxed">
-          <motion.h2 
+      <div className="max-w-7xl mx-auto container-padding">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20 lg:mb-24 leading-relaxed">
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-fluid-h2 font-black text-slate-900 mb-6"
+            className="text-fluid-h2 font-black text-slate-900 mb-4 md:mb-6 tracking-tight"
           >
             Everything You Need to Scale
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed"
+            className="text-base md:text-xl text-slate-600 font-medium leading-relaxed px-4"
           >
             Avva Inventory comes packed with robust features designed to streamline your daily operations and boost efficiency.
           </motion.p>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 lg:gap-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10"
         >
           {features.map((feature, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               variants={itemVariants}
-              className="group p-5 md:p-8 lg:p-10 rounded-2xl md:rounded-4xl border border-slate-100 bg-white hover:border-primary-20 hover:shadow-[0_20px_50px_rgba(12,60,120,0.05)] transition-all duration-500 hover:-translate-y-2 cursor-default relative overflow-hidden"
+              className="group p-6 sm:p-8 md:p-10 rounded-3xl md:rounded-4xl border border-slate-100 bg-white hover:border-primary-20 hover:shadow-[0_20px_60px_rgba(12,60,120,0.06)] transition-all duration-500 hover:-translate-y-2 cursor-default relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-primary-5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-[3rem]"></div>
-              
-              <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl flex items-center justify-center mb-5 md:mb-8 mix-blend-multiply transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${feature.color} shadow-sm group-hover:shadow-md`}>
-                {feature.icon}
+
+              <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6 md:mb-8 mix-blend-multiply transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${feature.color} shadow-sm group-hover:shadow-md`}>
+                {React.cloneElement(feature.icon, { size: 28 })}
               </div>
-              <h3 className="text-lg md:text-2xl font-bold text-slate-900 mb-2 md:mb-4 group-hover:text-primary transition-colors duration-300 tracking-tight">{feature.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-4 group-hover:text-primary transition-colors duration-300 tracking-tight">{feature.title}</h3>
               <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base lg:text-lg">
                 {feature.description}
               </p>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Package, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -84,20 +84,21 @@ const Navbar = () => {
           }}
           className="md:hidden overflow-hidden"
         >
-          <div className="flex flex-col space-y-1 py-6 px-2 border-t border-slate-100/50 mt-2">
+          <div className="flex flex-col space-y-2 py-8 px-4 border-t border-slate-100/50 mt-4">
             {navLinks.map((link, idx) => (
               <motion.a
                 variants={{
                   open: { opacity: 1, x: 0 },
                   closed: { opacity: 0, x: -20 }
                 }}
-                transition={{ delay: idx * 0.05 }}
+                transition={{ delay: idx * 0.05, type: 'spring', stiffness: 300, damping: 24 }}
                 key={link.name}
                 href={link.href}
                 onClick={closeMenu}
-                className="text-2xl font-black text-slate-900 hover:text-primary transition-colors py-3 px-2 tracking-tight rounded-xl hover:bg-slate-50"
+                className="text-3xl font-black text-slate-900 hover:text-primary transition-all py-4 px-4 tracking-tighter rounded-2xl hover:bg-slate-50 flex items-center justify-between group"
               >
-                {link.name}
+                <span>{link.name}</span>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-primary">→</span>
               </motion.a>
             ))}
             <motion.div
@@ -106,12 +107,12 @@ const Navbar = () => {
                 closed: { opacity: 0, y: 20 }
               }}
               transition={{ delay: 0.3 }}
-              className="pt-4 pb-2"
+              className="pt-8 pb-4"
             >
               <Link 
                 to="/live-demo" 
                 onClick={closeMenu}
-                className="w-full inline-flex items-center justify-center py-4 bg-primary text-white rounded-2xl font-black text-lg shadow-xl shadow-primary-20 active:scale-[0.98] transition-transform"
+                className="w-full inline-flex items-center justify-center py-5 bg-primary text-white rounded-[2rem] font-black text-xl shadow-2xl shadow-primary-20 active:scale-[0.98] transition-all"
               >
                 Start Free Trial
               </Link>
