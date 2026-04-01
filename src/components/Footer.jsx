@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col -gap-1">
                 <span className="font-black text-xl md:text-2xl tracking-tight text-white leading-none">
-                  V4Sure
+                  V4SURE
                 </span>
                 <span className="font-bold text-[10px] md:text-[12px] tracking-[0.2em] uppercase text-slate-400 leading-none">
                   IT Solutions
@@ -27,10 +27,10 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-6">
-               {/* Add social icons if needed later */}
+              {/* Add social icons if needed later */}
             </div>
           </div>
-          
+
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-xl mb-8 tracking-tight">Quick Links</h4>
             <ul className="space-y-4">
@@ -40,7 +40,7 @@ const Footer = () => {
               <li><a href="#contact" className="text-slate-400 hover:text-accent transition-all hover:translate-x-1 inline-block font-medium">Contact</a></li>
             </ul>
           </div>
-          
+
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="text-white font-bold text-xl mb-8 tracking-tight">Legal</h4>
             <ul className="space-y-4">
@@ -49,7 +49,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-10 border-t border-slate-800/50 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <p className="text-slate-500 text-base font-medium">
             © 2026 V4Sure IT Solutions. Built for excellence.

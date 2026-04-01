@@ -18,6 +18,19 @@ const PricingSection = () => {
       cta: 'Choose Lite'
     },
     {
+      name: 'Pro Plan',
+      price: '₹10300',
+      period: '/ Year',
+      description: 'Ideal for medium-sized growing businesses.',
+      features: [
+        { name: 'Professional Setup', details: '₹7300' },
+        { name: 'Dedicated Server', details: '₹3000' },
+        { name: 'Priority Support', details: 'Free' }
+      ],
+      highlighted: false,
+      cta: 'Choose Pro'
+    },
+    {
       name: 'Premium Pro Plan',
       price: '₹25000',
       period: '/ Lifetime',
@@ -30,19 +43,6 @@ const PricingSection = () => {
       highlighted: true,
       cta: 'Get Premium Pro',
       badge: 'Best Value'
-    },
-    {
-      name: 'Pro Plan',
-      price: '₹10300',
-      period: '/ Year',
-      description: 'Ideal for medium-sized growing businesses.',
-      features: [
-        { name: 'Professional Setup', details: '₹7300' },
-        { name: 'Dedicated Server', details: '₹3000' },
-        { name: 'Priority Support', details: 'Free' }
-      ],
-      highlighted: false,
-      cta: 'Choose Pro'
     }
   ];
 

@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col -gap-1">
               <span className="font-black text-base md:text-lg lg:text-xl tracking-tight text-primary leading-none">
-                V4Sure
+                V4SURE
               </span>
               <span className="font-bold text-[10px] md:text-[12px] tracking-[0.2em] uppercase text-slate-500 leading-none">
                 IT Solutions
@@ -56,7 +56,7 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Link 
+            <Link
               to="/live-demo"
               className="px-6 py-2.5 bg-primary text-white rounded-xl font-bold text-sm lg:text-base transition-all hover:bg-primary-90 shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-0.5 active:translate-y-0"
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100/50 transition-all focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu content */}
-        <motion.div 
+        <motion.div
           initial={false}
           animate={isOpen ? "open" : "closed"}
           variants={{
@@ -109,8 +109,8 @@ const Navbar = () => {
               transition={{ delay: 0.3 }}
               className="pt-8 pb-4"
             >
-              <Link 
-                to="/live-demo" 
+              <Link
+                to="/live-demo"
                 onClick={closeMenu}
                 className="w-full inline-flex items-center justify-center py-5 bg-primary text-white rounded-[2rem] font-black text-xl shadow-2xl shadow-primary-20 active:scale-[0.98] transition-all"
               >
